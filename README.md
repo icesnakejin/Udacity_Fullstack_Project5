@@ -2,10 +2,10 @@
 Linux Server Configuration
 
 ## IP ADRESSS
-54.186.7.234
+52.10.153.219
 
 ## WEB APP ADDRESS
-ec2-54-186-7-234.us-west-2.compute.amazonaws.com
+ec2-52-10-153-219.us-west-2.compute.amazonaws.com
 
 ## SSH PORT
 2200 
@@ -124,7 +124,7 @@ local   all             all                                     md5
  > sudo apt-get install git
  
  # cloning udacity-p3 repo
- > git clone https://github.com/icesnakejin/Udacity_Fullstack_Project3.git
+ > git clone https://github.com/icesnakejin/FS_P3_Catelog.git
  
  > cd udacity-p3/vagrant 
  > sudo apt-get -qqy update
@@ -142,9 +142,9 @@ local   all             all                                     md5
 # creating VirtualHost
 > sudo nano /etc/apache2/sites-available/catalog.conf 
 <VirtualHost *:80>
-      ServerName 54.186.7.234
-      ServerAdmin admin@54.186.7.234
-      ServerAlias ec2-54-186-7-234.us-west-2.compute.amazonaws.com
+      ServerName 52.10.153.219
+      ServerAdmin admin@52.10.153.219
+      ServerAlias ec2-52-10-153-219.us-west-2.compute.amazonaws.com
       WSGIScriptAlias / /var/www/catalog/catalog.wsgi
       <Directory /var/www/catalog/catalog/>
           Order allow,deny
@@ -158,7 +158,7 @@ local   all             all                                     md5
       ErrorLog ${APACHE_LOG_DIR}/error.log
       LogLevel warn
       CustomLog ${APACHE_LOG_DIR}/access.log combined
-  </VirtualHost>
+</VirtualHost>
 
 # creating .wsgi File
 > sudo nano /var/www/catalog/catalog.wsgi 
