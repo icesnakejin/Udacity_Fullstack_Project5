@@ -137,7 +137,7 @@ local   all             all                                     md5
  > python database_setup.py
  
  # changing config.py file for new db's location
- # engine = create_engine('postgresql://catalog:Icesnakejin1@localhost/catalog')
+ # engine = create_engine('postgresql://catalog:...@localhost/catalog')
 
 # creating VirtualHost
 > sudo nano /etc/apache2/sites-available/catalog.conf 
@@ -161,7 +161,7 @@ local   all             all                                     md5
   </VirtualHost>
 
 # creating .wsgi File
-> sudo nano /etc/apache2/sites-available/catalog.conf 
+> sudo nano /var/www/catalog/catalog.wsgi 
 #!/usr/bin/python
 import sys
 import logging
